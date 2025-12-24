@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+grpcio
+grpcio-tools
+ollama
+beautifulsoup4
+requests
+pydantic
+pytest

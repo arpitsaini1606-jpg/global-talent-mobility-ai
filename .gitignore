@@ -1,0 +1,22 @@
+# Java / Gradle
+.gradle/
+build/
+bin/
+*.class
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.env
+
+# MacOS
+.DS_Store
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo

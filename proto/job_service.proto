@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package mobility;
+
+option java_multiple_files = true;
+option java_package = "com.mobility.proto";
+option java_outer_classname = "JobServiceProto";
+
+// The JobService service definition.
+service JobService {
+  // Sends a request to scrape and analyze jobs
+  rpc ScrapeAndAnalyze (ScrapeRequest) returns (ScrapeResponse) {}
+}
+
+// The request message containing the search criteria
+message ScrapeRequest {
+  string country = 1;
+  string keyword = 2; // e.g., "Software Engineer"
+}
+
+// The response message containing the analyzed jobs
+message ScrapeResponse {
+  repeated Job jobs = 1;
+}
+
+message Job {
+  string title = 1;
+  string company = 2;
+  string location = 3;
+  string sponsorship_status = 4; // e.g., "Confirmed", "Likely", "None"
+  string summary = 5;
+  string url = 6;
+}
